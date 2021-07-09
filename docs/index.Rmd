@@ -1,7 +1,7 @@
 ---
 title: Generate Reproducible & Live HTML and PDF Conference Posters Using RMarkdown
 author:
-  - name: Brent Thorne
+  - name: 이광춘 
     affil: 1
     orcid: '0000-0002-1099-3857'
   - name: Another G. Author
@@ -12,8 +12,9 @@ affiliation:
   - num: 2
     address: Department of Graphics and Layouts, University of Posters; Canada
 column_numbers: 3
-logoright_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+logoright_name: https&#58;//raw.githubusercontent.com/tidyverse-korea/poster/main/useR_qrcode.png
 logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+font_family: NanumGothic
 output: 
   posterdown::posterdown_html:
     self_contained: false
