@@ -2,9 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>useR! 2021 Korea</title>
+
+<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+
+
+
 
 
 <!--
@@ -16,239 +25,30 @@ Font-awesome icons ie github or twitter
 <!--
 Google fonts api stuff
 -->
-<link href='https://fonts.googleapis.com/css?family=NanumGothic' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=NanumBarunpen' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=NanumBarunGothic' rel='stylesheet'>
 
-
-
-<title>Generate Reproducible &amp; Live HTML and PDF Conference Posters Using RMarkdown</title>
-
-<script src="index_files/header-attrs-2.6/header-attrs.js"></script>
-
-
-<style type="text/css">pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */</style>
-
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
 <style>
 @page {
-size: 45in 38in;
+size: 46in 32in;
 margin: 0;
 padding: 0;
+background-color: #ffffff;
 }
 body {
-margin: 0;
-font-size: 45px;
-width: 45in;
-height: 38in;
-padding: 0;
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
 text-align: justify;
-font-family: NanumGothic;
-}
-.poster_wrap {
-width: 45in;
-height: 38in;
-padding: 0cm;
-}
-.title_container {
-width: 45in;
-height: calc(38in * 0.15);
-overflow: hidden;
-background-color: #0b4545;
-border: 0 solid #0b4545;
-}
-.logo_left {
-float: left;
-width: 10%;
-height: 100%;
-background-color: #0b4545;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.logo_right {
-float: right;
-width: 10%;
-height: 100%;
-background-color: #0b4545;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.poster_title {
-text-align: center;
-position: relative;
-float: left;
-width: 80%;
-height: 100%;
-color: #FFFFFF;
-top: 50%;
-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
-}
-#title {
-font-family: NanumGothic;
-}
-/* unvisited link */
-a:link {
-color: #cc0000;
-}
-.mybreak {
-  break-before: column;
-}
-/* visited link */
-a:visited {
-color: #cc0000;
-}
-
-/* mouse over link */
-a:hover {
-color: #cc0000;
-}
-
-/* selected link */
-a:active {
-color: #cc0000;
-}
-.poster_body {
--webkit-column-count: 3; /* Chrome, Safari, Opera */
--moz-column-count: 3; /* Firefox */
-column-count: 3;
--webkit-column-fill: auto;
--moz-column-fill: auto;
-column-fill: auto;
--webkit-column-rule-width: 1mm;
--moz-column-rule-width: 1mm;
-column-rule-width: 1mm;
--webkit-column-rule-style: dashed;
--moz-column-rule-style: dashed;
-column-rule-style: dashed;
--webkit-column-rule-color: #0b4545;
--moz-column-rule-color: #0b4545;
-column-rule-color: #0b4545;
-column-gap: 1em;
-padding-left: 0.5em;
-padding-right: 0.5em;
-height: 100%;
-color: #000000
-background-color: #ffffff;
-}
-.poster_title h1 {
-font-size: 75pt;
-margin: 0;
-border: 0;
-font-weight: normal;
-}
-.poster_body_wrap{
-width: calc(45in + 0 + 0);
-height: calc(38in * 0.83);
-padding-top: calc(38in * 0.005);
-padding-bottom: calc(38in * 0.01);
-background-color: #ffffff;
-}
-.poster_title h3 {
-color: #ffffff;
-font-size: 50pt;
-margin: 0;
-border: 0;
-font-weight: normal;
-}
-.poster_title h3 > sup {
-  font-size: 35pt;
-  margin-left: 0.02em;
-}
-.poster_title h5 {
-color: #FFFFFF;
-font-size: 35pt;
-margin: 0;
-border: 0;
-font-weight: normal;
-}
-img {
-margin-top: 2cm;
-margin-bottom: 0;
-}
-.section {
-  padding: 0.2em;
-}
-.poster_body h1 {
-text-align: center;
-color: #FFFFFF;
-font-size: 65pt;
-border: 2mm solid #0b4545;
-background-color: #0b4545;
-border-radius: 4mm 0mm;
-margin-top: 2mm;
-margin-bottom: 2mm;
-font-weight: normal;
-}
-.poster_body h2 {
+font-size: 45px;
+background-color: #FFFFFF;
 color: #000000;
-font-size: 40pt;
-padding-left: 4mm;
-font-weight: normal;
 }
-.span {
-width: 200%;
-}
+/* RMarkdown Class Styles */
 /* center align leaflet map,
 from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
 .html-widget {
@@ -266,71 +66,219 @@ background-color: #dddddd40;
 border-radius: 4mm;
 padding: 4mm;
 width: 75%;
-/* align-items: center; */
 margin: auto;
-padding-left: 2cm;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
 }
 code.sourceCode.r{
 background-color: transparent;
 font-size: 20pt;
 border-radius: 2mm;
 }
-.caption {
-font-size: 25pt;
-}
-.table caption {
-font-size: 25pt;
-padding-bottom: 3mm;
-
-}
 code {
-font-size: 1em;
+font-size: 25pt;
 font-family: monospace;
 background-color: #00808024;
 color: #0b4545;
 padding: 1.2mm;
+line-height: 1;
 border-radius: 2mm;
-}
-.poster_title code {
-font-size: 1em;
-}
-table {
-font-size: 40px;
-margin: auto;
-border-top: 3px solid #666;
-border-bottom: 3px solid #666;
-}
-table thead th {
-border-bottom: 3px solid #ddd;
-}
-td {
-padding: 8px;
-}
-th {
-padding: 15px;
 }
 caption {
 margin-bottom: 10px;
-}
-.poster_body p {
-margin-right: 4mm;
-margin-left: 4mm;
-margin-top: 6mm;
-margin-bottom: 10mm;
-}
-.poster_body ol {
-margin-right: 4mm;
-margin-left: 4mm;
-}
-#ul {
-margin-right: 4mm;
-margin-left: 4mm;
-}
-.references p {
 font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #0b454520;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: 50%;
+background-color: #ffffff;
+font-family: NanumBarunGothic;
+color: #000000;
+}
+span.citation {
+  color: #008080;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #008080;
+}
+#title {
+font-size: 120px;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #0b4545;
+margin: 0;
+line-height: 90%;
+font-size: 77px;
+}
+#affiliation {
+padding-top: 1em;
+color: #00000060;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #008080;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in / 2);
+height: 32in;
+position: absolute;
+margin-left: calc(46in / 4);
+background-color: #0b4545;
+color: #FFFFFF90;
+font-family: NanumBarunpen;
+background-image: linear-gradient(#0b4545 50%, #008080);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 170px;
+text-align: left;
+}
+.fab {
+color: #00000060;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000060;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000060;
+font-size: 35px;
+}
+.envelope {
+color: #00000060;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .orcid img {
-  width: 1em;
+  width: 3%;
 }
 </style>
 </head>
@@ -338,255 +286,135 @@ font-size: 20pt;
 
 
 <div class="poster_wrap">
-<div class="title_container">
-<!-- Left Logo  -->
-<div class="logo_left">
-<img src= 'https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png' style="width: 80%">
-</div>
-<!-- Poster Title -->
-<div class= "poster_title">
-<h1 id="title">Generate Reproducible &amp; Live HTML and PDF Conference Posters Using RMarkdown</h1>
-<h3 id="author">이광춘<sup>1, <a class="orcid" href="https://orcid.org/0000-0002-1099-3857"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>, Another G. Author<sup>2</sup></h3><br>
-<h5 id="affiliation"><sup>1</sup> Department of Earth Science, Brock University<br> <sup>2</sup> Department of Graphics and Layouts, University of Posters; Canada</h5>
-</div>
-<!-- Right Logo  -->
-<div class="logo_right">
-<img src=https://raw.githubusercontent.com/tidyverse-korea/poster/main/useR_qrcode.png style="width: 80%">
-</div>
-</div>
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">useR! 2021 Korea</h1>
+<br>
+<h3 id="author" class="author">
 
-<div class='poster_body_wrap'>
-<div class='poster_body'>
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>Welcome to <code>posterdown</code> ! This is my attempt to provide a semi-smooth workflow for those who wish to take their R Markdown skills to the conference world. Most features from R Markdown are available in this package such as Markdown section notation, figure captioning, and even citations like this one <span class="citation">(Allaire et al. 2020)</span>. The rest of this example poster will show how you can insert typical conference poster features into your own document.</p>
-<div id="objectives" class="section level2">
-<h2>Objectives</h2>
-<ol style="list-style-type: decimal">
-<li>Easy to use reproducible poster design.</li>
-<li>Integration with R Markdown.</li>
-<li>Easy transition from <code>posterdown</code> to <code>pagedown</code> report or manuscript documents <span class="citation">(Xie et al. 2020)</span>.</li>
-</ol>
+R 사용자회<sup> 1</sup><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:admin@r2bit.com" class="email">admin@r2bit.com</a> <br>
+</h3>
+
+<h5 id="author_extra" class="author_extra">
+</h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Tidyverse Korea
+</p>
+
 </div>
+<p><br></p>
+<div id="들어가며" class="section level1">
+<h1>들어가며</h1>
+<p>디지털 불평등(Digital Divide)과 디지털 경제전환(Digital Transformation)의 가속화가 코로나19로 보다 명확해진 시대다. 이러한 변화의 중심에 빅데이터, 기계학습, 인공지능 등 데이터 기반 기술이 자리 잡고 있으며 또 집중 관심을 받고 있다. 데이터 시대를 맞아 R은 통계에 기반한 프로그래밍 언어임에도 불구하고 다른 범용 프로그래밍 언어와 같은 큰 인기를 얻고 있다.</p>
+<p><br></p>
+<p>금번 useR! 2021 Korea 컨퍼런스는 기존 통계학 관련 학계, 산업계, 정부 뿐 아니라 데이터 과학계까지 망라해 데이터를 통해 문제를 해결하고 가치를 창출하고자 하는 모든 분이 모여 경험과 지식을 공유하고 네트워킹을 할 수 있는 자리로 기획하였다. 데이터 활용의 폭과 깊이를 더한 이 자리에서 데이터를 통해 새로운 세상을 열어가고 함께 하실 수 있는 많은 분을 만나는 소중한 시간이 되었으면 하는 바람이다.</p>
+<p><br></p>
 </div>
-<div id="methods" class="section level1">
-<h1>Methods</h1>
-<p>This package uses the same workflow approach as the R Markdown you know and love. Basically it goes from RMarkdown &gt; Knitr &gt; Markdown &gt; Pandoc &gt; HTML/CSS &gt; PDF. You can even use the bibliography the same way <span class="citation">(Thorne 2019)</span>.</p>
+<div id="일시-및-장소" class="section level1">
+<h1>일시 및 장소</h1>
+<ul>
+<li>일시: 2021년 11월 19일(금) 10:00 ~ 17:00</li>
+<li>장소: 롯데월드타워 35층 원티드랩 (서울 송파구 올림픽로 300)</li>
+</ul>
+<p><br></p>
 </div>
-<div id="results" class="section level1">
-<h1>Results</h1>
-<p>Usually you want to have a nice table displaying some important results that you have calculated. In <code>posterdown</code> this is as easy as using the <code>kable</code> table formatting you are probably use to as per typical R Markdown formatting.</p>
-<p>You can reference tables like so: Table <a href="#tab:mytable">1</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat augue at velit tincidunt semper. Donec elementum porta posuere. Nullam interdum, odio at tincidunt feugiat, turpis nisi blandit eros, eu posuere risus felis non quam. Nam eget lorem odio. Duis et aliquet orci. Phasellus nec viverra est.</p>
-<table>
-<caption>
-<span id="tab:mytable">Table 1: </span>Table caption.
-</caption>
+<div id="컨퍼런스-주요-일정" class="section level1">
+<h1>컨퍼런스 주요 일정</h1>
+<ul>
+<li>2021-07-15 프로그램 발표자 모집 시작</li>
+<li>2021-08-15 Early Bird 컨퍼런스 사전 등록</li>
+<li>2021-09-10 프로그램 발표자 및 발표내용 공개</li>
+<li>2021-09-17 컨퍼런스 행사 등록 시작</li>
+<li>2021-11-05 발표자 발표자료 송부 마감일</li>
+<li>2021-11-12 컨퍼런스 등록 마감</li>
+<li>2021-11-19 컨퍼런스 본 행사</li>
+</ul>
+<p><br>
+<br></p>
+</div>
+<div id="키노트-발표" class="section level1">
+<h1>키노트 발표</h1>
+<p><a href="https://www.rstudio.com/speakers/julia-silge/"><img src="fig/julia_silge.jpg" width="480" alt="Julia Silge" /></a> <img src="fig/choonghyun_ryu.png" width="440" alt="한국 발표자" /></p>
+<p><br> <br></p>
+</div>
+<div id="키노트-프로그램" class="section level1">
+<h1>키노트 &amp; 프로그램</h1>
+<table style="width:99%;">
+<colgroup>
+<col width="36%" />
+<col width="62%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:center;">
-Sepal.Length
-</th>
-<th style="text-align:center;">
-Sepal.Width
-</th>
-<th style="text-align:center;">
-Petal.Length
-</th>
-<th style="text-align:center;">
-Petal.Width
-</th>
+<tr class="header">
+<th align="center">오전</th>
+<th align="center">키노트</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:center;">
-5.1
-</td>
-<td style="text-align:center;">
-3.5
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
+<tr class="odd">
+<td align="center">Julia Silge</td>
+<td align="center"><code>tidymodels</code> &amp; <code>tidytext</code></td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4.9
-</td>
-<td style="text-align:center;">
-3.0
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.7
-</td>
-<td style="text-align:center;">
-3.2
-</td>
-<td style="text-align:center;">
-1.3
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.6
-</td>
-<td style="text-align:center;">
-3.1
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.0
-</td>
-<td style="text-align:center;">
-3.6
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.4
-</td>
-<td style="text-align:center;">
-3.9
-</td>
-<td style="text-align:center;">
-1.7
-</td>
-<td style="text-align:center;">
-0.4
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.6
-</td>
-<td style="text-align:center;">
-3.4
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.3
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-5.0
-</td>
-<td style="text-align:center;">
-3.4
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.4
-</td>
-<td style="text-align:center;">
-2.9
-</td>
-<td style="text-align:center;">
-1.4
-</td>
-<td style="text-align:center;">
-0.2
-</td>
-</tr>
-<tr>
-<td style="text-align:center;">
-4.9
-</td>
-<td style="text-align:center;">
-3.1
-</td>
-<td style="text-align:center;">
-1.5
-</td>
-<td style="text-align:center;">
-0.1
-</td>
+<tr class="even">
+<td align="center">유충현</td>
+<td align="center"><code>dlookr</code> 오픈 통계 팩키지</td>
 </tr>
 </tbody>
 </table>
-<p>Or with figures: Figure <a href="#fig:standard-plot">1</a>, or Figure <a href="#fig:morefigs">2</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:standard-plot"></span>
-<img src="index_files/figure-html/standard-plot-1.png" alt="Great figure!" width="80%" />
-<p class="caption">
-Figure 1: Great figure!
-</p>
+<hr />
+<table>
+<colgroup>
+<col width="21%" />
+<col width="32%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">오후</th>
+<th align="center">Session I</th>
+<th align="center">Session II</th>
+<th align="center">Session III</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">전반</td>
+<td align="center">Reproducible Research</td>
+<td align="center">R Meets Python</td>
+<td align="center">Deep Learning</td>
+</tr>
+<tr class="even">
+<td align="center">후반</td>
+<td align="center">Data Journalism</td>
+<td align="center">Visualization</td>
+<td align="center">자연어처리</td>
+</tr>
+</tbody>
+</table>
+<p><br> <br></p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>data &lt;-<span class="st"> </span>iris</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="kw">plot</span>(<span class="dt">x =</span> data<span class="op">$</span>Sepal.Length, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>     <span class="dt">y =</span> data<span class="op">$</span>Sepal.Width, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>     <span class="dt">col =</span> data<span class="op">$</span>Species,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>     <span class="dt">pch =</span> <span class="dv">19</span>, </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>     <span class="dt">xlab =</span> <span class="st">&quot;Sepal Length (cm)&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>     <span class="dt">ylab =</span> <span class="st">&quot;Sepal Width (cm)&quot;</span>)</span></code></pre></div>
-<div class="figure"><span id="fig:morefigs"></span>
-<img src="index_files/figure-html/morefigs-1.png" alt="Amazing, right?!" width="80%" />
-<p class="caption">
-Figure 2: Amazing, right?!
-</p>
+<div id="함께하시는-분들" class="section level1">
+<h1>함께하시는 분들</h1>
+<p>이광춘, 유충현, 홍성학, 이봉호, 권오성, 나성호</p>
+<p><br> <br></p>
 </div>
-</div>
-<div id="next-steps" class="section level1">
-<h1>Next Steps</h1>
-<p>Aliquam sed faucibus risus, quis efficitur erat. Vestibulum semper mauris quis tempus eleifend. Aliquam sagittis dictum ipsum, quis viverra ligula eleifend ut. Curabitur sagittis vitae arcu eget faucibus. In non elementum felis. Duis et aliquam nunc. Nunc pulvinar sapien nunc, vel pretium nisi efficitur in. Fusce fringilla maximus leo et maximus. Fusce at ligula laoreet, iaculis mi at, auctor odio. Praesent sed elementum justo. Aenean consectetur risus rhoncus tincidunt efficitur. Praesent dictum mauris at diam maximus maximus <span class="citation">(Thorne 2019)</span>.</p>
-</div>
-<div id="conclusion" class="section level1">
-<h1>Conclusion</h1>
-<p>Try <code>posterdown</code> out! Hopefully you like it!</p>
-</div>
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
-<div id="refs" class="references hanging-indent">
-<div id="ref-R-rmarkdown">
-<p>Allaire, JJ, Yihui Xie, Jonathan McPherson, Javier Luraschi, Kevin Ushey, Aron Atkins, Hadley Wickham, Joe Cheng, Winston Chang, and Richard Iannone. 2020. <em>Rmarkdown: Dynamic Documents for R</em>. <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a>.</p>
-</div>
-<div id="ref-R-posterdown">
-<p>Thorne, Brent. 2019. <em>Posterdown: Generate Pdf Conference Posters Using R Markdown</em>. <a href="https://github.com/brentthorne/posterdown">https://github.com/brentthorne/posterdown</a>.</p>
-</div>
-<div id="ref-R-pagedown">
-<p>Xie, Yihui, Romain Lesur, Brent Thorne, and Xianying Tan. 2020. <em>Pagedown: Paginate the Html Output of R Markdown with Css for Print</em>. <a href="https://github.com/rstudio/pagedown">https://github.com/rstudio/pagedown</a>.</p>
-</div>
-</div>
-</div>
-</div>
+<div id="후원사" class="section level1">
+<h1>후원사</h1>
+<p><a href="https://jpub.tistory.com/"><img src="https://raw.githubusercontent.com/tidyverse-korea/rconf/master/fig/jpub-logo.jpeg" width="300" /></a> <a href="https://www.wanted.co.kr/company/79"><img src="fig/wanted-logo.png" width="250" /></a>
+<a href="https://www.hani.co.kr/"><img src="fig/hani_logo.jpg" width="350" /></a></p>
 </div>
 
+</div>
+<div class="main">
+<p>디지털 경제 패러다임 전환은 R<br><br> <img src="https://raw.githubusercontent.com/tidyverse-korea/rconf/master/fig/useR_Korea.png" class="main_pic" /></p>
+<img src="https://raw.githubusercontent.com/statkclee/comp_document/gh-pages/fig/useR_qrcode_transparent.png" class="main-img-left" />
+<img src="https://raw.githubusercontent.com/tidyverse-korea/rconf/master/fig/Tidyverse_Korea_logo.png" class="main-img-right" />
+</div>
 </div>
 
 
