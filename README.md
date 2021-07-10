@@ -11,7 +11,7 @@
 
 # 링크
 
-- 국문 포스xj(HTML): https://tidyverse-korea.github.io/poster/index.pdf
+- 국문 포스터(HTML): https://tidyverse-korea.github.io/poster/index.pdf
 - 영문 포스터(HTML): https://tidyverse-korea.github.io/poster/index_eng.pdf
 - 국문 PDF: https://tidyverse-korea.github.io/poster/useR_poster.pdf
 - 영문 PDF: https://tidyverse-korea.github.io/poster/useR_poster_eng.pdf
